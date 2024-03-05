@@ -1,0 +1,17 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#result {
+    display: none;
+}
+
+/* New style for error highlighting */
+.is-invalid {
+    border-color: #dc3545;
+}

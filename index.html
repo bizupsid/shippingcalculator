@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bizup Shipping Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container p-5">
+        <h2 class="mb-4">Bizup Shipping Calculator</h2>
+        <form id="shippingForm">
+            <div class="form-group">
+                <label for="yourPincode">Your Pincode*</label>
+                <input type="number" class="form-control" id="yourPincode" placeholder="Enter 6-digit Pincode for pickup" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label for="buyersPincode">Buyer's Pincode*</label>
+                <input type="number" class="form-control" id="buyersPincode" placeholder="Enter 6-digit Pincode for delivery" maxlength="6">
+            </div>
+            <div class="form-group">
+                <label>Payment Mode</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMode" id="prepaid" value="Prepaid" checked>
+                    <label class="form-check-label" for="prepaid">Prepaid</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMode" id="cod" value="COD">
+                    <label class="form-check-label" for="cod">COD</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="invoiceValue">Invoice value</label>
+                <input type="number" class="form-control" id="invoiceValue" placeholder="10000" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="weight">Weight (Kgs)*</label>
+                <input type="number" class="form-control" id="weight" placeholder="2.5" required step="0.01">
+            </div>
+            <div class="form-group">
+                <label>Box Packaging</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="boxPackaging" id="yes" value="Yes">
+                    <label class="form-check-label" for="yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="boxPackaging" id="no" value="No" checked>
+                    <label class="form-check-label" for="no">No</label>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="calculateBtn" disabled>Calculate</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+        <div id="result" class="mt-3"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
